@@ -105,22 +105,7 @@ CUDA_VISIBLE_DEVICES=0 python sparkvsr_inference_script.py \
     --is_vae_st --ref_mode no_ref --upscale 4
 ```
 
-### 2. PiSA-SR reference mode
-
-```bash
-conda activate sparkvsr
-CUDA_VISIBLE_DEVICES=0 python sparkvsr_inference_script.py \
-    --input_dir datasets/test/SPMCS/LQ-Video \
-    --model_path checkpoints/SparkVSR \
-    --output_path results/SPMCS/pisasr \
-    --is_vae_st --ref_mode pisasr --ref_indices 0 --upscale 4 \
-    --pisa_python_executable /path/to/lora_env/bin/python \
-    --pisa_script_path /path/to/PiSA-SR/test_pisasr.py \
-    --pisa_sd_model_path /path/to/stable-diffusion-2-1-base \
-    --pisa_chkpt_path /path/to/pisa_sr.pkl --pisa_gpu 1
-```
-
-### 3. DLoRA reference mode (our main contribution)
+### 2. DLoRA reference mode (our main contribution)
 
 ```bash
 export DLORA_HOME=/path/to/dlora_improved
@@ -182,13 +167,4 @@ DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation
 
 
 
-## Common Issues
 
-| Problem | Solution |
-|---|---|
-| GitHub/HuggingFace unreachable | Use mirrors or SSH |
-| `pkg_resources` missing | `pip install setuptools<80` |
-| DLoRA subprocess `expandable_segments` error | DLoRA uses torch 2.0.1 which does not support this; it is removed from subprocess env automatically |
-| GPU OOM | Add `--chunk_len 16 --tile_size_hw 480 480` |
-| FastVQA import fails | `ln -sfn FAST-VQA-and-FasterVQA metrics/FastVQA` |
-| FFmpeg not found | `conda install -c conda-forge ffmpeg` |
