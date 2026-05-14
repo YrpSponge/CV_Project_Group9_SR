@@ -74,8 +74,9 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 
 | File | Size | Google Drive Link |
 |---|---|---|
-| model_52001.pkl (RAFT) | 3.3 GB | [PLACEHOLDER] |
-| sidechannel_step005000.pt | 78 MB | [PLACEHOLDER] |
+| model_52001.pkl (RAFT) | 3.3 GB | https://drive.google.com/file/d/12sg3vfzIdrECjpyjt0huypQThyCWLki6/view?usp=sharing |
+| sidechannel_step005000.pt | 78 MB | https://drive.google.com/file/d/1k0Z_7BZRwjZ_CEXfOtSa4AJ6PhCGWSHA/view?usp=sharing |
+| DAPE.pth (RAM finetune) | 7 MB | https://drive.google.com/file/d/1uJRzbKhP0fQlWCruYWg4HglXyaRoHNio/view?usp=sharing |
 | stable-diffusion-2-1-base/ | 14 GB | [PLACEHOLDER] |
 | ram_swin_large_14m.pth | 5.3 GB | [PLACEHOLDER] |
 
