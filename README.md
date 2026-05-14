@@ -72,7 +72,7 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 
 ### DLoRA W4+SC Weights
 
-| File | Size | Google Drive Link |
+| File | Size | Link |
 |---|---|---|
 | model_52001.pkl (RAFT) | 3.3 GB | https://drive.google.com/file/d/12sg3vfzIdrECjpyjt0huypQThyCWLki6/view?usp=sharing |
 | sidechannel_step005000.pt | 78 MB | https://drive.google.com/file/d/1k0Z_7BZRwjZ_CEXfOtSa4AJ6PhCGWSHA/view?usp=sharing |
@@ -84,7 +84,7 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 
 ### Evaluation Metrics Weights
 
-| File | Size | Google Drive Link |
+| File | Size | Link |
 |---|---|---|
 | DOVER.pth | 229 MB | https://huggingface.co/teowu/DOVER |
 | FAST_VQA_3D_1_1.pth | 122 MB | https://github.com/TimothyHTimothy/FAST-VQA/releases/download/v2.0.0/FAST_VQA_3D_1_1.pth |
