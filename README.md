@@ -77,8 +77,8 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 | model_52001.pkl (RAFT) | 3.3 GB | https://drive.google.com/file/d/12sg3vfzIdrECjpyjt0huypQThyCWLki6/view?usp=sharing |
 | sidechannel_step005000.pt | 78 MB | https://drive.google.com/file/d/1k0Z_7BZRwjZ_CEXfOtSa4AJ6PhCGWSHA/view?usp=sharing |
 | DAPE.pth (RAM finetune) | 7 MB | https://drive.google.com/file/d/1uJRzbKhP0fQlWCruYWg4HglXyaRoHNio/view?usp=sharing |
-| stable-diffusion-2-1-base/ | 14 GB | [PLACEHOLDER] |
-| ram_swin_large_14m.pth | 5.3 GB | [PLACEHOLDER] |
+| stable-diffusion-2-1-base/ | 14 GB | https://huggingface.co/stabilityai/stable-diffusion-2-1-base |
+| ram_swin_large_14m.pth | 5.3 GB | https://huggingface.co/spaces/xinyu1205/recognize-anything |
 
 
 
@@ -86,9 +86,9 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 
 | File | Size | Google Drive Link |
 |---|---|---|
-| DOVER.pth | 229 MB | [PLACEHOLDER] |
-| FAST_VQA_3D_1_1.pth | 122 MB | [PLACEHOLDER] |
-| swin_tiny_patch244_window877_kinetics400_1k.pth | 122 MB | [PLACEHOLDER] |
+| DOVER.pth | 229 MB | https://huggingface.co/teowu/DOVER |
+| FAST_VQA_3D_1_1.pth | 122 MB | https://github.com/TimothyHTimothy/FAST-VQA/releases/download/v2.0.0/FAST_VQA_3D_1_1.pth |
+| swin_tiny_patch244_window877_kinetics400_1k.pth | 122 MB | https://github.com/SwinTransformer/storage/releases/download/v1.0.4/swin_tiny_patch244_window877_kinetics400_1k.pth |
 
 ## Usage
 
@@ -166,7 +166,7 @@ bash run_eval_all.sh \
 
 DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation. For DLoRA standalone results and keyframe-count ablation, see our `eval_log.md`.
 
-## Visualized Results
+## Visualization
 
 ### Pipeline Overview
 
@@ -174,7 +174,8 @@ DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation
 
 ### DLoRA Optimization Flow
 
-![DLoRA Flow](demo/DLoRA Optimization Flow.png)
+![DLoRA Flow](demo/DLoRA-Optimization-Flow.png)
+
 
 ### Qualitative Comparison: Wild Video
 
