@@ -166,6 +166,27 @@ bash run_eval_all.sh \
 
 DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation. For DLoRA standalone results and keyframe-count ablation, see our `eval_log.md`.
 
+## Visualized Results
 
+### Pipeline Overview
+
+![Pipeline](demo/pipeline.png)
+
+### DLoRA Optimization Flow
+
+![DLoRA Flow](demo/DLoRA Optimization Flow.png)
+
+### Qualitative Comparison: Wild Video
+
+<table>
+<tr>
+<td width="50%"><b>Input (Low-Resolution)</b></td>
+<td width="50%"><b>SparkVSR + DLoRA (Ours)</b></td>
+</tr>
+<tr>
+<td><video src="demo/wild-video.mp4" controls muted autoplay loop width="100%"></video></td>
+<td><video src="demo/wild-video-SparkVSR+dlora.mp4" controls muted autoplay loop width="100%"></video></td>
+</tr>
+</table>
 
 
