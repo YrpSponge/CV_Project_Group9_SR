@@ -79,11 +79,7 @@ All weights must be downloaded separately. Placeholder links below -- replace wi
 | stable-diffusion-2-1-base/ | 14 GB | [PLACEHOLDER] |
 | ram_swin_large_14m.pth | 5.3 GB | [PLACEHOLDER] |
 
-### PiSA-SR Weight
 
-| File | Size | Google Drive Link |
-|---|---|---|
-| pisa_sr.pkl | 32 MB | [PLACEHOLDER] |
 
 ### Evaluation Metrics Weights
 
@@ -184,11 +180,7 @@ bash run_eval_all.sh \
 
 DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation. For DLoRA standalone results and keyframe-count ablation, see our `eval_log.md`.
 
-### Qualitative: Wild Video (10244482, frame 0)
 
-| Input LQ | no_ref | + PiSA-SR | + DLoRA (ours) |
-|---|---|---|---|
-| ![](demo/input_frame0.png) | ![](demo/no_ref_frame0.png) | ![](demo/pisasr_frame0.png) | ![](demo/dlora_frame0.png) |
 
 ## Common Issues
 
