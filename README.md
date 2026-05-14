@@ -145,26 +145,27 @@ bash run_eval_all.sh \
 
 ## Results
 
+Comparison of DLoRAL standalone variants and SparkVSR fusion variants. **Bold** = best, *italic* = second-best.
+
 ### UDM10 (10 clips, synthetic BD degradation)
 
-| Metric | no_ref | + PiSA-SR | + DLoRA (ours) |
-|---|---|---|---|
-| PSNR | 29.66 | 28.72 | 26.73 |
-| SSIM | 0.868 | 0.841 | 0.790 |
-| CLIPIQA | 0.454 | 0.294 | **0.593** |
-| MUSIQ | 59.57 | 50.86 | **67.93** |
-| DOVER Overall | 0.618 | 0.511 | **0.687** |
+| Config | PSNR↑ | SSIM↑ | LPIPS↓ | MUSIQ↑ | CLIPIQA↑ | DOVER↑ | FasterVQA↑ |
+|---|---|---|---|---|---|---|---|
+| DLoRAL baseline | 26.72 | 0.767 | 0.219 | **68.98** | **0.658** | **0.762** | 0.586 |
+| *DLoRAL improved | *28.36* | *0.814* | *0.194* | 62.01 | *0.595* | *0.719* | 0.733 |
+| SparkVSR no_ref | **29.66** | **0.868** | **0.147** | 59.57 | 0.454 | 0.618 | *0.805* |
+| SparkVSR + DLoRAL, 1-kf | 26.73 | 0.790 | 0.225 | *67.93* | 0.593 | 0.687 | **0.841** |
 
 ### SPMCS (30 clips, mixed degradation)
 
-| Metric | no_ref | + PiSA-SR | + DLoRA (ours) |
-|---|---|---|---|
-| PSNR | 18.99 | 17.12 | 18.67 |
-| CLIPIQA | 0.545 | **0.706** | 0.607 |
-| MUSIQ | 67.57 | **73.92** | 70.18 |
-| DOVER Overall | 0.498 | **0.548** | 0.490 |
+| Config | PSNR↑ | SSIM↑ | LPIPS↓ | MUSIQ↑ | CLIPIQA↑ | DOVER↑ | FasterVQA↑ |
+|---|---|---|---|---|---|---|---|
+| DLoRAL baseline | *22.61* | *0.679* | **0.156** | 66.07 | **0.617** | **0.791** | 0.606 |
+| *DLoRAL improved | **24.45** | **0.726** | **0.156** | 60.46 | 0.569 | *0.774* | *0.712* |
+| SparkVSR no_ref | 18.99 | 0.490 | *0.220* | *67.57* | 0.545 | 0.498 | 0.703 |
+| SparkVSR + DLoRAL, 1-kf | 18.67 | 0.460 | 0.266 | **70.18** | *0.607* | 0.490 | **0.738** |
 
-DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation. For DLoRA standalone results and keyframe-count ablation, see our `eval_log.md`.
+DLoRAL standalone generally favors pixel-level fidelity, while SparkVSR fusion improves some video-oriented perceptual metrics. For DLoRA standalone results and keyframe-count ablation, see `eval_log.md`.
 
 ## Visualization
 
@@ -179,15 +180,7 @@ DLoRA achieves best NR metrics on UDM10; PiSA-SR leads on SPMCS real degradation
 
 ### Qualitative Comparison: Wild Video
 
-<table>
-<tr>
-<td width="50%"><b>Input (Low-Resolution)</b></td>
-<td width="50%"><b>SparkVSR + DLoRA (Ours)</b></td>
-</tr>
-<tr>
-<td><video src="demo/wild-video.mp4" controls muted autoplay loop width="100%"></video></td>
-<td><video src="demo/wild-video-SparkVSR+dlora.mp4" controls muted autoplay loop width="100%"></video></td>
-</tr>
-</table>
+- demo/wild-video.mp4
+- demo/wild-video-SparkVSR+dlora.mp4
 
 
