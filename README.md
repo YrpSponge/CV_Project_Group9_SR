@@ -183,4 +183,8 @@ DLoRAL standalone generally favors pixel-level fidelity, while SparkVSR fusion i
 - demo/wild-video.mp4
 - demo/wild-video-SparkVSR+dlora.mp4
 
+## Acknowledgement
+
+- This project builds upon [DLoRAL](https://github.com/yjsunnn/DLoRAL) and [SparkVSR](https://github.com/taco-group/SparkVSR). We thank the authors for their excellent work and open-source release. 
+- We also sincerely thank our course instructor **Prof. Hao Wang** for his guidance and support throughout this project.
 
